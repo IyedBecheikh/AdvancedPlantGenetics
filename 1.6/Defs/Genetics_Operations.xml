@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ===== Crossing bench (medieval) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Cross</defName>
+    <label>cross-pollinate</label>
+    <description>Cross two strains of the same species. Your botanist raises several offspring; you keep one and get seed packets of it. Offspring take one allele per locus from each parent, so recessive traits can surface.</description>
+    <kind>Cross</kind>
+    <inputs>2</inputs>
+    <workAmount>2500</workAmount>
+    <skill>Plants</skill>
+    <minSkill>4</minSkill>
+    <candidates>3</candidates>
+    <outputCount>4</outputCount>
+    <researchPrerequisite>APG_PlantBreeding</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Self</defName>
+    <label>self-pollinate</label>
+    <description>Pollinate a strain with itself. Each generation of selfing fixes more loci, which is how purebred lines that breed true are made. Also uncovers hidden recessive traits.</description>
+    <kind>SelfPollinate</kind>
+    <inputs>1</inputs>
+    <workAmount>2000</workAmount>
+    <skill>Plants</skill>
+    <minSkill>4</minSkill>
+    <candidates>3</candidates>
+    <outputCount>4</outputCount>
+    <researchPrerequisite>APG_PlantBreeding</researchPrerequisite>
+    <order>1</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Propagation bench (medieval) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Cuttings</defName>
+    <label>propagate cuttings</label>
+    <description>Root cuttings from one seed packet's plant: 1 packet becomes 4 identical packets. Can repeat until a chosen number of packets is in stock.</description>
+    <kind>Propagate</kind>
+    <inputs>1</inputs>
+    <workAmount>1500</workAmount>
+    <skill>Plants</skill>
+    <minSkill>3</minSkill>
+    <outputCount>4</outputCount>
+    <canRepeat>true</canRepeat>
+    <researchPrerequisite>APG_Propagation</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Genetic analyzer (industrial) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Analyze</defName>
+    <label>sequence genome</label>
+    <description>Read the full genotype of a strain: both alleles of every locus and carried genes. Its alleles and genes join the allele library. The packet is returned.</description>
+    <kind>Analyze</kind>
+    <inputs>1</inputs>
+    <consumesInputs>false</consumesInputs>
+    <workAmount>3000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>4</minSkill>
+    <fuelCost>1</fuelCost>
+    <outputCount>0</outputCount>
+    <researchPrerequisite>APG_GeneticAnalysis</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Gene bank (industrial) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Archive</defName>
+    <label>archive strain</label>
+    <description>Store an analysed strain's genome in the gene bank. Archived strains can be printed by a seed synthesizer without seed. The packet is returned.</description>
+    <kind>Archive</kind>
+    <inputs>1</inputs>
+    <consumesInputs>false</consumesInputs>
+    <workAmount>800</workAmount>
+    <skill>Intellectual</skill>
+    <outputCount>0</outputCount>
+    <researchPrerequisite>APG_GeneticAnalysis</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Tissue culture lab (industrial) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Micropropagate</defName>
+    <label>micropropagate</label>
+    <description>Grow plantlets from tissue samples: 1 packet becomes 12 identical packets. Can repeat until a chosen number of packets is in stock.</description>
+    <kind>Propagate</kind>
+    <inputs>1</inputs>
+    <workAmount>2500</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>4</minSkill>
+    <fuelCost>1</fuelCost>
+    <outputCount>12</outputCount>
+    <canRepeat>true</canRepeat>
+    <researchPrerequisite>APG_TissueCulture</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Mutagen chamber (industrial) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Mutate</defName>
+    <label>induce mutations</label>
+    <description>Irradiate seed. Produces several mutants, each with 1 to 3 changed loci (mostly upward, up to level +6) and a chance of a new industrial gene such as bioluminescence. Choose one to keep. With genetic analysis researched the mutants' genotypes are read on the spot.</description>
+    <kind>Mutate</kind>
+    <inputs>1</inputs>
+    <workAmount>5000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>6</minSkill>
+    <fuelCost>2</fuelCost>
+    <candidates>4</candidates>
+    <outputCount>3</outputCount>
+    <levelCap>6</levelCap>
+    <researchPrerequisite>APG_Mutagenesis</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Colchicine</defName>
+    <label>colchicine treatment</label>
+    <description>Double the plant's chromosome sets. The result is polyploid: +6 genome capacity, so it can carry more improvements without burden.</description>
+    <kind>Polyploidy</kind>
+    <inputs>1</inputs>
+    <workAmount>4000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>6</minSkill>
+    <fuelCost>3</fuelCost>
+    <outputCount>3</outputCount>
+    <researchPrerequisite>APG_Mutagenesis</researchPrerequisite>
+    <order>1</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Gene splicer (spacer) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_EditLocus</defName>
+    <label>edit locus</label>
+    <description>Set both alleles of one locus to an exact level. You can only write levels your allele library already contains (from any analysed strain of any species), up to +8. Lowering a locus frees genome capacity.</description>
+    <kind>EditLocus</kind>
+    <inputs>1</inputs>
+    <workAmount>8000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>8</minSkill>
+    <fuelCost>1</fuelCost>
+    <fuelPerLevel>1</fuelPerLevel>
+    <outputCount>3</outputCount>
+    <levelCap>8</levelCap>
+    <useLibrary>true</useLibrary>
+    <researchPrerequisite>APG_GeneSplicing</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Splice</defName>
+    <label>splice gene</label>
+    <description>Insert two copies of a known or synthetic gene, from any species.</description>
+    <kind>SpliceGene</kind>
+    <inputs>1</inputs>
+    <workAmount>8000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>8</minSkill>
+    <fuelCost>3</fuelCost>
+    <outputCount>3</outputCount>
+    <maxGeneTier>Spacer</maxGeneTier>
+    <researchPrerequisite>APG_GeneSplicing</researchPrerequisite>
+    <order>1</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_RemoveGene</defName>
+    <label>knock out gene</label>
+    <description>Remove a gene from a strain, freeing the capacity it used.</description>
+    <kind>RemoveGene</kind>
+    <inputs>1</inputs>
+    <workAmount>4000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>6</minSkill>
+    <fuelCost>1</fuelCost>
+    <outputCount>3</outputCount>
+    <researchPrerequisite>APG_GeneSplicing</researchPrerequisite>
+    <order>2</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Seed synthesizer (spacer, autonomous) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_Synthesize</defName>
+    <label>synthesize seeds</label>
+    <description>Print 10 seed packets of an archived strain from gene reagent. Needs a powered gene bank and no colonist. Can repeat until a chosen number of packets is in stock.</description>
+    <kind>SynthesizeSeeds</kind>
+    <inputs>0</inputs>
+    <consumesInputs>false</consumesInputs>
+    <workAmount>6000</workAmount>
+    <fuelCost>1</fuelCost>
+    <outputCount>10</outputCount>
+    <canRepeat>true</canRepeat>
+    <researchPrerequisite>APG_SeedSynthesis</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <!-- ===== Genesis synthesizer (ultratech) ===== -->
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_GenesisEdit</defName>
+    <label>synthesize allele</label>
+    <description>Write a locus to any level up to +10, with no library needed.</description>
+    <kind>EditLocus</kind>
+    <inputs>1</inputs>
+    <workAmount>12000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>10</minSkill>
+    <fuelCost>1</fuelCost>
+    <fuelPerLevel>0.5</fuelPerLevel>
+    <outputCount>4</outputCount>
+    <levelCap>10</levelCap>
+    <researchPrerequisite>APG_GenomeSynthesis</researchPrerequisite>
+    <order>0</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_GenesisSplice</defName>
+    <label>splice exotic gene</label>
+    <description>Insert any known or synthetic gene, including ultratech genes such as chemosynthesis, deathless tissue and phytomining.</description>
+    <kind>SpliceGene</kind>
+    <inputs>1</inputs>
+    <workAmount>12000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>10</minSkill>
+    <fuelCost>2</fuelCost>
+    <outputCount>4</outputCount>
+    <maxGeneTier>Ultra</maxGeneTier>
+    <researchPrerequisite>APG_GenomeSynthesis</researchPrerequisite>
+    <order>1</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+
+  <AdvancedPlantGenetics.GeneticOperationDef>
+    <defName>APG_Op_SynthChromosome</defName>
+    <label>install synthetic chromosome</label>
+    <description>Add a synthetic chromosome: +12 genome capacity.</description>
+    <kind>SyntheticChromosome</kind>
+    <inputs>1</inputs>
+    <workAmount>15000</workAmount>
+    <skill>Intellectual</skill>
+    <minSkill>10</minSkill>
+    <fuelCost>4</fuelCost>
+    <outputCount>4</outputCount>
+    <researchPrerequisite>APG_GenomeSynthesis</researchPrerequisite>
+    <order>2</order>
+  </AdvancedPlantGenetics.GeneticOperationDef>
+</Defs>

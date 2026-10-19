@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>APG_Seeds</defName>
+    <label>seeds</label>
+    <parent>ResourcesRaw</parent>
+    <iconPath>UI/APG/SeedCategory</iconPath>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>APG_GeneticsSupplies</defName>
+    <label>genetics supplies</label>
+    <parent>Manufactured</parent>
+    <iconPath>UI/APG/SuppliesCategory</iconPath>
+  </ThingCategoryDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>APG_SeedPacket</defName>
+    <label>seed packet</label>
+    <description>A packet of seed of one plant strain. Seed of identical strains stacks together. Set a growing zone's or planter's seed stock to a strain to sow it; each sown plant uses one packet from anywhere on the map.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/APG/SeedPacket</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>APG_Seeds</li>
+    </thingCategories>
+    <tradeTags>
+      <li>APG_Seeds</li>
+    </tradeTags>
+    <comps>
+      <li Class="AdvancedPlantGenetics.CompProperties_SeedGenome"/>
+    </comps>
+    <inspectorTabs>
+      <li>AdvancedPlantGenetics.ITab_PlantGenetics</li>
+    </inspectorTabs>
+    <techLevel>Neolithic</techLevel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeNeverStack>false</tradeNeverStack>
+    <allowedArchonexusCount>40</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>APG_CultureMedium</defName>
+    <label>culture medium</label>
+    <description>Sterile nutrient gel for plant tissue work. Fuel for the genetic analyzer, tissue culture lab and mutagen chamber.</description>
+    <graphicData>
+      <texPath>Things/Item/APG/CultureMedium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>50</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>9</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>APG_GeneticsSupplies</li>
+    </thingCategories>
+    <techLevel>Industrial</techLevel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>APG_GeneReagent</defName>
+    <label>gene reagent</label>
+    <description>Synthetic nucleotides, enzymes and vectors for precise genome editing. Fuel for the gene splicer and the seed synthesizer.</description>
+    <graphicData>
+      <texPath>Things/Item/APG/GeneReagent</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>55</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>APG_GeneticsSupplies</li>
+    </thingCategories>
+    <techLevel>Spacer</techLevel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>APG_ArchogeneticCatalyst</defName>
+    <label>archogenetic catalyst</label>
+    <description>Self-assembling molecular machinery that writes DNA base by base. Fuel for the genesis synthesizer.</description>
+    <graphicData>
+      <texPath>Things/Item/APG/ArchogeneticCatalyst</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>380</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>APG_GeneticsSupplies</li>
+    </thingCategories>
+    <techLevel>Ultra</techLevel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+  </ThingDef>
+
+  <!-- ===== Recipes ===== -->
+  <RecipeDef>
+    <defName>APG_MakeCultureMedium</defName>
+    <label>make culture medium</label>
+    <description>Make culture medium from raw plant food and chemfuel.</description>
+    <jobString>Making culture medium.</jobString>
+    <workAmount>900</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+      <thingDefs>
+        <li>Chemfuel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <APG_CultureMedium>5</APG_CultureMedium>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <researchPrerequisite>APG_GeneticAnalysis</researchPrerequisite>
+    <skillRequirements>
+      <Intellectual>3</Intellectual>
+    </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>APG_MakeGeneReagent</defName>
+    <label>make gene reagent</label>
+    <description>Make gene reagent from culture medium, gold and chemfuel.</description>
+    <jobString>Making gene reagent.</jobString>
+    <workAmount>2400</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>APG_CultureMedium</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>APG_CultureMedium</li>
+        <li>Gold</li>
+        <li>Chemfuel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <APG_GeneReagent>4</APG_GeneReagent>
+    </products>
+    <recipeUsers>
+      <li>FabricationBench</li>
+    </recipeUsers>
+    <researchPrerequisite>APG_GeneSplicing</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>APG_MakeArchogeneticCatalyst</defName>
+    <label>make archogenetic catalyst</label>
+    <description>Assemble archogenetic catalyst from plasteel, gold, uranium and gene reagent.</description>
+    <jobString>Making archogenetic catalyst.</jobString>
+    <workAmount>6000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>APG_GeneReagent</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>APG_GeneReagent</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <APG_ArchogeneticCatalyst>2</APG_ArchogeneticCatalyst>
+    </products>
+    <recipeUsers>
+      <li>FabricationBench</li>
+    </recipeUsers>
+    <researchPrerequisite>APG_GenomeSynthesis</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

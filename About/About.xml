@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Advanced Plant Genetics</name>
+  <packageId>iyedm.AdvancedPlantGenetics</packageId>
+  <author>IyedBecheikh</author>
+  <modVersion>1.0.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>ferny.progressionagriculture</li>
+    <li>VanillaExpanded.VPlantsE</li>
+    <li>VanillaExpanded.VPlantsEMore</li>
+  </loadAfter>
+  <description>Plant genetics as a full progression path, from tribal seed saving to ultratech genome synthesis.
+
+Every sown plant has a readable genome: nine loci with dominant and recessive alleles (growth, yield, fertility response, soil tolerance, light efficiency, cold and heat tolerance, blight resistance, vigor) plus special genes. Inheritance is Mendelian: purebred lines breed true, hybrids scramble, recessive traits hide and resurface. A genome capacity budget means you specialise: a hydroponic supercrop and a tundra crop are different designs.
+
+[b]Tribal[/b] - Collect seed from your best plants, sow it, save seed at harvest.
+[b]Medieval[/b] - Crossing bench: cross or self-pollinate and keep the best of several offspring. Propagation bench: multiply any strain true to type.
+[b]Industrial[/b] - Genetic analyzer reveals hidden alleles; gene bank; tissue culture (1 packet to 12); mutagen chamber and colchicine polyploidy.
+[b]Spacer[/b] - Gene splicer edits loci from your allele library and splices genes across species; synthetic traits (circadian override, runners); autonomous seed synthesizer.
+[b]Ultratech[/b] - Genesis synthesizer: alleles up to +10, synthetic chromosomes, chemosynthetic and deathless plants, phytomining.
+
+Wild-type farming stays exactly like vanilla: no seed micromanagement unless you choose a strain. Seed packets are tradeable and worth more with better genetics.
+
+Optional: Progression: Agriculture (unlocking a crop also gives heirloom seed; seed packets can unlock their crop). Safe to add to an existing save.</description>
+</ModMetaData>

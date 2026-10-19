@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData><name>APG Test Harness</name><packageId>iyedm.apgtest</packageId><author>iyedm</author>
+<supportedVersions><li>1.6</li></supportedVersions><description>test only</description>
+<loadAfter><li>iyedm.AdvancedPlantGenetics</li></loadAfter></ModMetaData>

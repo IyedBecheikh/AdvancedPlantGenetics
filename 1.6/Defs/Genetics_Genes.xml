@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ===== Natural: appear by mutation and (rarely) in wild plants ===== -->
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Perennial</defName>
+    <label>perennial</label>
+    <description>Survives harvest and regrows from about 30% growth instead of being replanted. Saves sowing work and gives quicker follow-up harvests. Recessive: needs two copies to show, so it hides in hybrids.</description>
+    <tier>Neolithic</tier>
+    <recessive>true</recessive>
+    <capacityCost>3</capacityCost>
+    <naturalWeight>1</naturalWeight>
+    <regrowGrowth>0.3</regrowGrowth>
+    <order>0</order>
+    <color>(0.45, 0.75, 0.45)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_FrostHardy</defName>
+    <label>frost-hardy</label>
+    <description>Goes dormant in hard frost instead of dying, and loses its leaves only about 20°C later than normal.</description>
+    <tier>Neolithic</tier>
+    <capacityCost>2</capacityCost>
+    <naturalWeight>1</naturalWeight>
+    <frostHardy>true</frostHardy>
+    <order>1</order>
+    <color>(0.55, 0.8, 0.95)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <!-- ===== Industrial: from the mutagen chamber and colchicine treatment ===== -->
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Polyploid</defName>
+    <label>polyploid</label>
+    <description>Doubled chromosome sets. Raises genome capacity by 6, so the plant can carry more improvements without genetic burden. Made by colchicine treatment.</description>
+    <tier>Industrial</tier>
+    <capacityBonus>6</capacityBonus>
+    <order>10</order>
+    <color>(0.6, 0.6, 0.95)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Bioluminescent</defName>
+    <label>bioluminescent</label>
+    <description>Gives off a soft green glow once established. Plants with high light efficiency can light each other.</description>
+    <tier>Industrial</tier>
+    <capacityCost>2</capacityCost>
+    <mutagenWeight>3</mutagenWeight>
+    <glowRadius>4</glowRadius>
+    <glowColor>(140, 255, 190, 0)</glowColor>
+    <order>11</order>
+    <color>(0.4, 0.95, 0.65)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_PollutionTolerant</defName>
+    <label>pollution-tolerant</label>
+    <description>Grows on polluted ground as well as clean ground.</description>
+    <tier>Industrial</tier>
+    <capacityCost>2</capacityCost>
+    <mutagenWeight>2</mutagenWeight>
+    <pollutionTolerant>true</pollutionTolerant>
+    <requiredModId>ludeon.rimworld.biotech</requiredModId>
+    <order>12</order>
+    <color>(0.7, 0.75, 0.35)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <!-- ===== Spacer: synthetic, spliced at the gene splicer ===== -->
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_CircadianOverride</defName>
+    <label>circadian override</label>
+    <description>Rewritten day cycle: the plant doesn't rest at night and grows around the clock (about 1.8 times faster in good light, e.g. under sun lamps).</description>
+    <tier>Spacer</tier>
+    <capacityCost>6</capacityCost>
+    <circadianOverride>true</circadianOverride>
+    <syntheticResearch>APG_SyntheticTraits</syntheticResearch>
+    <order>20</order>
+    <color>(0.95, 0.85, 0.4)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_GeneCompression</defName>
+    <label>gene compression</label>
+    <description>Packs regulatory sequences tighter. Raises genome capacity by 6.</description>
+    <tier>Spacer</tier>
+    <capacityBonus>6</capacityBonus>
+    <syntheticResearch>APG_SyntheticTraits</syntheticResearch>
+    <order>21</order>
+    <color>(0.6, 0.6, 0.95)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Runners</defName>
+    <label>runners</label>
+    <description>Sends out runners that root as exact copies in empty cells of its own growing zone or planter. Fields refill themselves without sowing work or seeds.</description>
+    <tier>Spacer</tier>
+    <capacityCost>3</capacityCost>
+    <runners>true</runners>
+    <syntheticResearch>APG_SyntheticTraits</syntheticResearch>
+    <order>22</order>
+    <color>(0.5, 0.85, 0.5)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_ToxinScrubber</defName>
+    <label>toxin scrubber</label>
+    <description>Breaks down pollutants in the soil around it, slowly cleaning polluted ground.</description>
+    <tier>Spacer</tier>
+    <capacityCost>3</capacityCost>
+    <toxinScrubber>true</toxinScrubber>
+    <pollutionTolerant>true</pollutionTolerant>
+    <requiredModId>ludeon.rimworld.biotech</requiredModId>
+    <syntheticResearch>APG_SyntheticTraits</syntheticResearch>
+    <order>23</order>
+    <color>(0.6, 0.8, 0.4)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <!-- ===== Ultratech: genome synthesis ===== -->
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_SyntheticChromosome</defName>
+    <label>synthetic chromosome</label>
+    <description>An extra, fully synthetic chromosome. Raises genome capacity by 12.</description>
+    <tier>Ultra</tier>
+    <capacityBonus>12</capacityBonus>
+    <spliceable>false</spliceable>
+    <syntheticResearch>APG_GenomeSynthesis</syntheticResearch>
+    <order>30</order>
+    <color>(0.75, 0.6, 1.0)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Chemosynthetic</defName>
+    <label>chemosynthetic</label>
+    <description>Draws energy from soil chemistry instead of light. Grows at full speed in total darkness.</description>
+    <tier>Ultra</tier>
+    <capacityCost>6</capacityCost>
+    <chemosynthetic>true</chemosynthetic>
+    <syntheticResearch>APG_GenomeSynthesis</syntheticResearch>
+    <order>31</order>
+    <color>(0.55, 0.45, 0.75)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Deathless</defName>
+    <label>deathless</label>
+    <description>Cellular repair keeps the plant alive indefinitely. No lifespan, and immune to death from vacuum, darkness and toxic fallout.</description>
+    <tier>Ultra</tier>
+    <capacityCost>5</capacityCost>
+    <deathless>true</deathless>
+    <syntheticResearch>APG_GenomeSynthesis</syntheticResearch>
+    <order>32</order>
+    <color>(0.9, 0.9, 0.95)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Ferrophyte</defName>
+    <label>ferrophyte</label>
+    <description>Phytomining: concentrates iron from the soil. Each harvest also gives steel (about 0.35 per unit of normal yield).</description>
+    <tier>Ultra</tier>
+    <capacityCost>7</capacityCost>
+    <harvestBonusThing>Steel</harvestBonusThing>
+    <harvestBonusPerYield>0.35</harvestBonusPerYield>
+    <syntheticResearch>APG_Phytomining</syntheticResearch>
+    <order>40</order>
+    <color>(0.6, 0.65, 0.7)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Argentophyte</defName>
+    <label>argentophyte</label>
+    <description>Phytomining: concentrates silver. Each harvest also gives silver (about 0.5 per unit of normal yield).</description>
+    <tier>Ultra</tier>
+    <capacityCost>8</capacityCost>
+    <harvestBonusThing>Silver</harvestBonusThing>
+    <harvestBonusPerYield>0.5</harvestBonusPerYield>
+    <syntheticResearch>APG_Phytomining</syntheticResearch>
+    <order>41</order>
+    <color>(0.85, 0.85, 0.9)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+
+  <AdvancedPlantGenetics.PlantGeneDef>
+    <defName>APG_Aurophyte</defName>
+    <label>aurophyte</label>
+    <description>Phytomining: concentrates gold. Each harvest also gives a little gold (about 0.03 per unit of normal yield).</description>
+    <tier>Ultra</tier>
+    <capacityCost>9</capacityCost>
+    <harvestBonusThing>Gold</harvestBonusThing>
+    <harvestBonusPerYield>0.03</harvestBonusPerYield>
+    <syntheticResearch>APG_Phytomining</syntheticResearch>
+    <order>42</order>
+    <color>(0.95, 0.8, 0.3)</color>
+  </AdvancedPlantGenetics.PlantGeneDef>
+</Defs>

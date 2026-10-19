@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignationDef>
+    <defName>APG_CollectSeeds</defName>
+    <texturePath>UI/APG/CollectSeedsDesignation</texturePath>
+    <targetType>Thing</targetType>
+  </DesignationDef>
+
+  <JobDef>
+    <defName>APG_CollectSeedsJob</defName>
+    <driverClass>AdvancedPlantGenetics.JobDriver_CollectSeeds</driverClass>
+    <reportString>collecting seeds from TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>APG_OperateStation</defName>
+    <driverClass>AdvancedPlantGenetics.JobDriver_OperateStation</driverClass>
+    <reportString>working at TargetA.</reportString>
+  </JobDef>
+
+  <WorkGiverDef>
+    <defName>APG_CollectSeeds</defName>
+    <label>collect seeds</label>
+    <giverClass>AdvancedPlantGenetics.WorkGiver_CollectSeeds</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>60</priorityInType>
+    <verb>collect seeds from</verb>
+    <gerund>collecting seeds from</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>APG_GeneticsStationPlants</defName>
+    <label>breed plants</label>
+    <giverClass>AdvancedPlantGenetics.WorkGiver_GeneticsStationPlants</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>30</priorityInType>
+    <verb>work at</verb>
+    <gerund>working at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>APG_GeneticsStationLab</defName>
+    <label>run plant genetics experiments</label>
+    <giverClass>AdvancedPlantGenetics.WorkGiver_GeneticsStationLab</giverClass>
+    <workType>Research</workType>
+    <priorityInType>80</priorityInType>
+    <verb>work at</verb>
+    <gerund>working at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <MainButtonDef>
+    <defName>APG_PlantGenetics</defName>
+    <label>genetics</label>
+    <description>Plant strains, allele library and genetics progress.</description>
+    <tabWindowClass>AdvancedPlantGenetics.MainTabWindow_PlantGenetics</tabWindowClass>
+    <order>45</order>
+    <iconPath>UI/APG/MainTab</iconPath>
+    <minimized>true</minimized>
+    <validWithoutMap>false</validWithoutMap>
+  </MainButtonDef>
+</Defs>

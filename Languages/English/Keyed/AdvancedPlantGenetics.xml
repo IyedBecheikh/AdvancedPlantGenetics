@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Plants and seeds -->
+  <APG.Strain>Strain</APG.Strain>
+  <APG.Landrace>landrace</APG.Landrace>
+  <APG.UnnamedStrain>unnamed strain</APG.UnnamedStrain>
+  <APG.TabGenetics>Genetics</APG.TabGenetics>
+  <APG.SeedLabel>{0} seeds</APG.SeedLabel>
+  <APG.SeedLabelNamed>{0} seeds '{1}'</APG.SeedLabelNamed>
+  <APG.SeedsCount>{0} seeds</APG.SeedsCount>
+  <APG.Generation>Generation</APG.Generation>
+  <APG.GenShort>gen {0}</APG.GenShort>
+  <APG.Analyzed>analysed</APG.Analyzed>
+  <APG.Archived>archived in gene bank</APG.Archived>
+  <APG.Species>Species</APG.Species>
+  <APG.Traits>Traits</APG.Traits>
+  <APG.NoNotableTraits>nothing notable</APG.NoNotableTraits>
+  <APG.Typical>typical</APG.Typical>
+  <APG.SeedQualityValue>Seed genetics</APG.SeedQualityValue>
+  <APG.BurdenShort>burden {0}</APG.BurdenShort>
+  <APG.NoInsight>Your colonists can't tell these plants apart yet. Research seed saving.</APG.NoInsight>
+  <APG.Purebred>purebred</APG.Purebred>
+  <APG.Hybrid>hybrid ({0}/{1} loci fixed)</APG.Hybrid>
+  <APG.Carrier>carrier</APG.Carrier>
+  <APG.NoSpecialGenes>No special genes.</APG.NoSpecialGenes>
+  <APG.RecessiveNote>Recessive: only expressed with two copies. Carriers pass it on without showing it.</APG.RecessiveNote>
+  <APG.Capacity>Genome capacity</APG.Capacity>
+  <APG.CapacityDesc>Every positive level costs capacity: 1 per level up to +4, 2 per level above that. Most negative levels refund capacity (up to 3 per locus), so specialising pays. Genes cost or add capacity.\n\nBase capacity is {0}. Load above capacity is genetic burden: -{1} growth and yield per point.</APG.CapacityDesc>
+  <APG.BurdenPct>burden -{0}</APG.BurdenPct>
+  <APG.Eff_Growth>growth x{0} ({1} days)</APG.Eff_Growth>
+  <APG.Eff_Yield>yield x{0} ({1})</APG.Eff_Yield>
+  <APG.Eff_FertResponse>fertility response {0}</APG.Eff_FertResponse>
+  <APG.Eff_MinFertility>min. fertility {0}</APG.Eff_MinFertility>
+  <APG.Eff_Light>light {0}-{1}</APG.Eff_Light>
+  <APG.Eff_Temperature>grows {0} to {1}</APG.Eff_Temperature>
+  <APG.Eff_Blight>blight resistance {0}</APG.Eff_Blight>
+  <APG.Eff_Regrows>regrows from {0}</APG.Eff_Regrows>
+  <APG.Eff_NoLifespan>no lifespan</APG.Eff_NoLifespan>
+  <APG.Favorite>Favourite</APG.Favorite>
+  <APG.Unfavorite>Unfavourite</APG.Unfavorite>
+  <APG.Hide>Hide</APG.Hide>
+  <APG.Unhide>Unhide</APG.Unhide>
+  <APG.RecordStrain>Record strain</APG.RecordStrain>
+  <APG.RecordStrainDesc>Add this plant's genome to your strain catalog so you can follow and name it.</APG.RecordStrainDesc>
+  <APG.Origin>Origin</APG.Origin>
+  <APG.Parents>Parents</APG.Parents>
+  <APG.Created>Recorded</APG.Created>
+  <APG.Origin_Bred>bred</APG.Origin_Bred>
+  <APG.Origin_Wild>wild plant</APG.Origin_Wild>
+  <APG.Origin_Collected>collected seed</APG.Origin_Collected>
+  <APG.Origin_Debug>debug</APG.Origin_Debug>
+  <APG.Origin_Trade>traded heirloom</APG.Origin_Trade>
+  <APG.Origin_Heirloom>heirloom seed</APG.Origin_Heirloom>
+  <APG.Origin_Propagated>propagated</APG.Origin_Propagated>
+  <APG.Origin_Synthesized>synthesized</APG.Origin_Synthesized>
+  <APG.Origin_Cross>cross-pollinated</APG.Origin_Cross>
+  <APG.Origin_SelfPollinate>self-pollinated</APG.Origin_SelfPollinate>
+  <APG.Origin_Mutate>induced mutation</APG.Origin_Mutate>
+  <APG.Origin_Polyploidy>colchicine treatment</APG.Origin_Polyploidy>
+  <APG.Origin_EditLocus>gene edited</APG.Origin_EditLocus>
+  <APG.Origin_SpliceGene>gene spliced</APG.Origin_SpliceGene>
+  <APG.Origin_RemoveGene>gene knocked out</APG.Origin_RemoveGene>
+  <APG.Origin_SyntheticChromosome>synthetic chromosome</APG.Origin_SyntheticChromosome>
+  <APG.Origin_Propagate>propagated</APG.Origin_Propagate>
+  <APG.Origin_Analyze>analysed</APG.Origin_Analyze>
+  <APG.Origin_Archive>archived</APG.Origin_Archive>
+  <APG.Origin_SynthesizeSeeds>synthesized</APG.Origin_SynthesizeSeeds>
+  <APG.NewTraitLetter>New trait: {0}</APG.NewTraitLetter>
+  <APG.NewTraitLetterDesc>A {0} plant in your colony shows a trait nobody has seen before: {1}.\n\n{2}\n\nKeep its seed. Breeding it into your best lines, or later reading and splicing it, makes it yours.</APG.NewTraitLetterDesc>
+
+  <!-- Collecting and stocking seed -->
+  <APG.CollectSeeds>Collect seeds</APG.CollectSeeds>
+  <APG.CollectSeedsDesc>Have a grower harvest this plant for seed instead of produce. The seeds are this plant crossed with a neighbouring plant of the same kind (or itself, if alone), so plant your best specimens together.</APG.CollectSeedsDesc>
+  <APG.SeedsCollected>Collected {0} {1} seeds: '{2}'.</APG.SeedsCollected>
+  <APG.SeedStockWild>Seed: wild type</APG.SeedStockWild>
+  <APG.SeedStockNamed>Seed: {0} ({1})</APG.SeedStockNamed>
+  <APG.SeedStockDesc>Choose which strain of {0} to sow here. Wild type needs no seed and gives natural, random plants. A strain gives every new plant that exact genome and uses one seed packet per plant from anywhere on this map.</APG.SeedStockDesc>
+  <APG.WildType>Wild type (no seed needed)</APG.WildType>
+  <APG.NoStrainsWithSeeds>No {0} strains with seed on this map</APG.NoStrainsWithSeeds>
+  <APG.SaveSeeds>Save seed</APG.SaveSeeds>
+  <APG.SaveSeedsDesc>Harvests here also return seed. Seed forms by pollination with neighbours; off-type seed is discarded. Purebred strains replace their seed fully, hybrids don't breed true and return little.</APG.SaveSeedsDesc>
+  <APG.SaveSeedsStats>So far: {0} seeds saved, {1} off-types discarded.</APG.SaveSeedsStats>
+  <APG.UnlockCrop>Unlock {0}</APG.UnlockCrop>
+  <APG.UnlockCropDesc>Use one packet of this seed to make {0} available for growing zones and planters.</APG.UnlockCropDesc>
+  <APG.NoSeedsReason>No seed of the chosen strain</APG.NoSeedsReason>
+
+  <!-- Stations -->
+  <APG.NewExperiment>Set up...</APG.NewExperiment>
+  <APG.NewExperimentDesc>Choose what this station should do next.</APG.NewExperimentDesc>
+  <APG.ChooseResult>Choose result</APG.ChooseResult>
+  <APG.ChooseResultDesc>The experiment finished. Pick which result to keep.</APG.ChooseResultDesc>
+  <APG.CancelExperiment>Cancel</APG.CancelExperiment>
+  <APG.CancelExperimentDesc>Cancel the current task. Loaded seed packets are returned.</APG.CancelExperimentDesc>
+  <APG.NoTask>Idle.</APG.NoTask>
+  <APG.CurrentTask>Task: {0}</APG.CurrentTask>
+  <APG.Progress>Progress: {0}</APG.Progress>
+  <APG.AwaitingChoice>Results ready: choose one to keep.</APG.AwaitingChoice>
+  <APG.NeedsResearch>Needs research: {0}</APG.NeedsResearch>
+  <APG.WaitingForInputs>Waiting for seed packets to be brought.</APG.WaitingForInputs>
+  <APG.NeedsFuel>Needs {0} {1}.</APG.NeedsFuel>
+  <APG.StockReached>Stock target reached ({0}).</APG.StockReached>
+  <APG.AnalyzerLinked>Genetic analyzer linked: genotypes shown, +1 candidate.</APG.AnalyzerLinked>
+  <APG.AnalyzerNotLinked>Link a powered {0} for genotypes and +1 candidate.</APG.AnalyzerNotLinked>
+  <APG.ComputeLinked>{0} linked: -25% fuel, +35% speed.</APG.ComputeLinked>
+  <APG.LibraryUse>Gene bank: {0} / {1} strains archived.</APG.LibraryUse>
+  <APG.NoInputSeeds>No reachable seed packets of the chosen strain</APG.NoInputSeeds>
+  <APG.ResultsReady>{0}: experiment finished, choose a result.</APG.ResultsReady>
+  <APG.AnalyzedMessage>Genome of {0} sequenced.</APG.AnalyzedMessage>
+  <APG.ArchivedMessage>{0} archived in the gene bank.</APG.ArchivedMessage>
+  <APG.EditedMessage>New strain made: {0}.</APG.EditedMessage>
+  <APG.KeepCount>keep {0} in stock</APG.KeepCount>
+  <APG.RunOnce>Run once</APG.RunOnce>
+  <APG.MustBeSameSpecies>Both parents must be the same species.</APG.MustBeSameSpecies>
+  <APG.MustBeAnalyzed>The strain must be analysed first.</APG.MustBeAnalyzed>
+  <APG.MustBeArchived>Choose a strain archived in a gene bank.</APG.MustBeArchived>
+  <APG.LibraryFull>The gene banks are full. Build another gene bank.</APG.LibraryFull>
+  <APG.NoGeneBank>Needs a powered gene bank.</APG.NoGeneBank>
+  <APG.ChooseLocus>Choose a locus.</APG.ChooseLocus>
+  <APG.ChooseGene>Choose a gene.</APG.ChooseGene>
+  <APG.LevelNotAvailable>That level isn't available here.</APG.LevelNotAvailable>
+  <APG.ChooseOperation>Choose what to do.</APG.ChooseOperation>
+  <APG.ChooseStrain>Choose a strain...</APG.ChooseStrain>
+  <APG.ChooseArchived>Choose an archived strain...</APG.ChooseArchived>
+  <APG.NoArchived>No archived strains.</APG.NoArchived>
+  <APG.NoSeedsOnMap>No seed packets on this map.</APG.NoSeedsOnMap>
+  <APG.NeedTwoPackets>Crossing a strain with itself needs two packets. Use self-pollinate instead.</APG.NeedTwoPackets>
+  <APG.NoGenesAvailable>No genes available.</APG.NoGenesAvailable>
+  <APG.StartExperiment>Start</APG.StartExperiment>
+  <APG.WorkAmount>work {0}</APG.WorkAmount>
+  <APG.FuelCost>uses {0} {1} (has {2})</APG.FuelCost>
+  <APG.MinSkill>{0} {1}+</APG.MinSkill>
+  <APG.CandidatesInfo>{0} candidates, keep one as {1} packets</APG.CandidatesInfo>
+  <APG.OutputInfo>gives {0} packets</APG.OutputInfo>
+  <APG.UpTo>up to {0}</APG.UpTo>
+  <APG.TargetLevel>Target level {0}</APG.TargetLevel>
+  <APG.Dominant>Dominant</APG.Dominant>
+  <APG.LibraryLimit>Your allele library has {0} up to {1} (station limit {2}). Analyse better strains to raise it.</APG.LibraryLimit>
+  <APG.Result>Result</APG.Result>
+  <APG.ChooseResultTitle>{0}: choose a result</APG.ChooseResultTitle>
+  <APG.ChooseResultHint>The one you keep becomes {0} seed packets. The others are discarded.</APG.ChooseResultHint>
+  <APG.ParentLabel>Parent: {0}</APG.ParentLabel>
+  <APG.CandidateLabel>Candidate {0}</APG.CandidateLabel>
+  <APG.KeepThis>Keep this one</APG.KeepThis>
+  <APG.DiscardAll>Discard all</APG.DiscardAll>
+
+  <!-- Alerts -->
+  <APG.AlertOutOfSeeds>Out of seed</APG.AlertOutOfSeeds>
+  <APG.AlertOutOfSeedsDesc>These fields are set to sow a strain that has no seed left on the map:\n\n{0}\n\nCollect, propagate or synthesize more seed, or switch the field back to wild type.</APG.AlertOutOfSeedsDesc>
+  <APG.AlertResults>Genetics results ready</APG.AlertResults>
+  <APG.AlertResultsDesc>An experiment finished. Select the station and choose which result to keep.</APG.AlertResultsDesc>
+  <APG.AlertNotable>Promising plants</APG.AlertNotable>
+  <APG.AlertNotableDesc>Your growers noticed some unusually good plants in your fields. Order "collect seeds" on them to start a better line.</APG.AlertNotableDesc>
+
+  <!-- Main tab -->
+  <APG.PageStrains>Strains</APG.PageStrains>
+  <APG.PageLibrary>Allele library</APG.PageLibrary>
+  <APG.PageProgress>Progress</APG.PageProgress>
+  <APG.AllSpecies>All species</APG.AllSpecies>
+  <APG.OnlyWithSeeds>With seed on map</APG.OnlyWithSeeds>
+  <APG.ShowHidden>Show hidden</APG.ShowHidden>
+  <APG.NoStrainsYet>No strains recorded yet. Collect seeds from a plant to start.</APG.NoStrainsYet>
+  <APG.LibraryIntro>Every analysed strain adds its alleles to the library. The gene splicer can only write levels the library contains; genome synthesis goes beyond it.</APG.LibraryIntro>
+  <APG.GenesHeader>Genes</APG.GenesHeader>
+  <APG.GeneKnown>known (analysed)</APG.GeneKnown>
+  <APG.GeneSynthetic>synthetic, ready to splice</APG.GeneSynthetic>
+  <APG.GeneSourceNatural>appears naturally: look for it in wild plants and seed heads</APG.GeneSourceNatural>
+  <APG.GeneSourceMutagen>can appear in the mutagen chamber</APG.GeneSourceMutagen>
+  <APG.GeneSourceResearch>synthetic: research {0}</APG.GeneSourceResearch>
+  <APG.GeneSourceSpecial>made by a special operation</APG.GeneSourceSpecial>
+  <APG.ResearchItem>Research: {0}</APG.ResearchItem>
+  <APG.BuildingItem>Built: {0}</APG.BuildingItem>
+  <APG.Era_Tribal_Title>Tribal: selection</APG.Era_Tribal_Title>
+  <APG.Era_Tribal_Desc>Plants vary naturally. Collect seed from your best plants (they cross with their neighbours), set fields to sow that seed and repeat. Fields of identical plants keep their seed with "save seed".</APG.Era_Tribal_Desc>
+  <APG.Era_Medieval_Title>Medieval: organised breeding</APG.Era_Medieval_Title>
+  <APG.Era_Medieval_Desc>Cross and self-pollinate at the crossing bench and pick the best offspring. Self-pollinating fixes traits into purebred lines; cuttings multiply any strain true to type. Traits are now measured exactly.</APG.Era_Medieval_Desc>
+  <APG.Era_Industrial_Title>Industrial: scientific genetics</APG.Era_Industrial_Title>
+  <APG.Era_Industrial_Desc>Sequence genomes to see hidden recessives, multiply seed twelvefold in tissue culture, induce mutations beyond natural limits and double chromosomes for more capacity.</APG.Era_Industrial_Desc>
+  <APG.Era_Spacer_Title>Spacer: genetic engineering</APG.Era_Spacer_Title>
+  <APG.Era_Spacer_Desc>Edit loci to exact levels from your allele library, splice genes across species, add synthetic traits and let seed synthesizers keep archived strains in stock automatically.</APG.Era_Spacer_Desc>
+  <APG.Era_Ultra_Title>Ultratech: biological mastery</APG.Era_Ultra_Title>
+  <APG.Era_Ultra_Desc>Write alleles to +10, add synthetic chromosomes, and create plants that need no light, never die, or mine metals from the soil.</APG.Era_Ultra_Desc>
+</LanguageData>

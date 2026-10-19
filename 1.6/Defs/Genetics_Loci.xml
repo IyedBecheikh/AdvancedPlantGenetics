@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Nine loci. Levels: natural breeding reaches +4, mutagenesis +6, gene editing +8, genome synthesis +10. -->
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_Growth</defName>
+    <label>growth</label>
+    <description>How fast the plant matures. Divides the grow time by the factor shown.</description>
+    <symbol>G</symbol>
+    <effect>Growth</effect>
+    <order>0</order>
+    <color>(0.45, 0.8, 0.4)</color>
+    <curve>
+      <points>
+        <li>(-3, 0.75)</li>
+        <li>(-2, 0.84)</li>
+        <li>(-1, 0.92)</li>
+        <li>(0, 1)</li>
+        <li>(1, 1.08)</li>
+        <li>(2, 1.16)</li>
+        <li>(3, 1.25)</li>
+        <li>(4, 1.35)</li>
+        <li>(5, 1.5)</li>
+        <li>(6, 1.7)</li>
+        <li>(7, 1.95)</li>
+        <li>(8, 2.25)</li>
+        <li>(9, 2.6)</li>
+        <li>(10, 3.0)</li>
+      </points>
+    </curve>
+    <positiveWord>vigorous</positiveWord>
+    <strongPositiveWord>exceptionally vigorous</strongPositiveWord>
+    <negativeWord>slow-growing</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_Yield</defName>
+    <label>yield</label>
+    <description>How much the plant gives at harvest.</description>
+    <symbol>Y</symbol>
+    <effect>Yield</effect>
+    <order>1</order>
+    <color>(0.95, 0.75, 0.3)</color>
+    <curve>
+      <points>
+        <li>(-3, 0.7)</li>
+        <li>(-2, 0.8)</li>
+        <li>(-1, 0.9)</li>
+        <li>(0, 1)</li>
+        <li>(1, 1.08)</li>
+        <li>(2, 1.16)</li>
+        <li>(3, 1.25)</li>
+        <li>(4, 1.35)</li>
+        <li>(5, 1.52)</li>
+        <li>(6, 1.75)</li>
+        <li>(7, 2.05)</li>
+        <li>(8, 2.4)</li>
+        <li>(9, 2.9)</li>
+        <li>(10, 3.5)</li>
+      </points>
+    </curve>
+    <positiveWord>bountiful</positiveWord>
+    <strongPositiveWord>exceptionally bountiful</strongPositiveWord>
+    <negativeWord>meagre</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_FertilityResponse</defName>
+    <label>fertility response</label>
+    <description>How strongly growth follows soil fertility (fertility sensitivity, +10% per level).\n\nPositive: grows much faster on rich soil and in hydroponics, but worse on poor soil.\nNegative: steady growth everywhere, little benefit from rich ground.\n\nCosts genome capacity in either direction.</description>
+    <symbol>S</symbol>
+    <effect>FertilityResponse</effect>
+    <loadMode>Absolute</loadMode>
+    <minLevel>-8</minLevel>
+    <order>2</order>
+    <perLevel>0.1</perLevel>
+    <color>(0.4, 0.65, 0.95)</color>
+    <positiveWord>soil-hungry</positiveWord>
+    <negativeWord>steady</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_SoilTolerance</defName>
+    <label>soil tolerance</label>
+    <description>The minimum soil fertility the plant can be sown in (-8 percentage points per level). Separate from fertility response: a tolerant plant can be sown on poor ground, how well it grows there depends on its fertility response.</description>
+    <symbol>F</symbol>
+    <effect>SoilTolerance</effect>
+    <order>3</order>
+    <perLevel>0.08</perLevel>
+    <color>(0.7, 0.5, 0.3)</color>
+    <positiveWord>hardy-rooted</positiveWord>
+    <negativeWord>fussy</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_LightEfficiency</defName>
+    <label>light efficiency</label>
+    <description>How little light the plant needs. Lowers the minimum light level (-6 points per level) and the light level for full growth.</description>
+    <symbol>L</symbol>
+    <effect>LightEfficiency</effect>
+    <order>4</order>
+    <perLevel>0.06</perLevel>
+    <color>(0.95, 0.95, 0.5)</color>
+    <positiveWord>shade-tolerant</positiveWord>
+    <negativeWord>light-hungry</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_ColdTolerance</defName>
+    <label>cold tolerance</label>
+    <description>Lowers the minimum growing temperatures by 3°C per level. Longer growing seasons in cold climates.</description>
+    <symbol>C</symbol>
+    <effect>ColdTolerance</effect>
+    <order>5</order>
+    <perLevel>3</perLevel>
+    <color>(0.55, 0.85, 1.0)</color>
+    <positiveWord>cold-hardy</positiveWord>
+    <negativeWord>frost-tender</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_HeatTolerance</defName>
+    <label>heat tolerance</label>
+    <description>Raises the maximum growing temperatures by 3°C per level.</description>
+    <symbol>H</symbol>
+    <effect>HeatTolerance</effect>
+    <order>6</order>
+    <perLevel>3</perLevel>
+    <color>(1.0, 0.5, 0.35)</color>
+    <positiveWord>heat-hardy</positiveWord>
+    <negativeWord>heat-tender</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_BlightResistance</defName>
+    <label>blight resistance</label>
+    <description>10% chance per level to shrug off blight. At +10 the plant can't be blighted at all.\n\nNegative levels are free: they don't refund capacity.</description>
+    <symbol>B</symbol>
+    <effect>BlightResistance</effect>
+    <loadMode>Positive</loadMode>
+    <order>7</order>
+    <perLevel>0.1</perLevel>
+    <color>(0.75, 0.55, 0.85)</color>
+    <positiveWord>blight-resistant</positiveWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+
+  <AdvancedPlantGenetics.GeneLocusDef>
+    <defName>APG_Vigor</defName>
+    <label>vigor</label>
+    <description>Longevity: +20% lifespan per level, and regrowing plants (and perennials) come back further after harvest.</description>
+    <symbol>V</symbol>
+    <effect>Vigor</effect>
+    <order>8</order>
+    <perLevel>0.2</perLevel>
+    <color>(0.4, 0.85, 0.75)</color>
+    <positiveWord>long-lived</positiveWord>
+    <negativeWord>short-lived</negativeWord>
+  </AdvancedPlantGenetics.GeneLocusDef>
+</Defs>

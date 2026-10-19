@@ -1,0 +1,12 @@
+# Build output
+**/obj/
+**/bin/
+Tests/APGTest/Assemblies/
+*.pdb
+.vs/
+*.user
+
+# OS / editor
+Thumbs.db
+.DS_Store
+__pycache__/
