@@ -2,6 +2,8 @@
 
 A RimWorld 1.6 mod that turns plant genetics into a full progression path, from tribal seed saving to ultratech genome synthesis.
 
+![Preview](About/Preview.png)
+
 Every sown plant has a readable genome. You discover good plants, breed and engineer them, and reproduce the best as named strains. Better genetics need research, buildings, power, materials and skilled colonists, not just waiting.
 
 Design notes: [DESIGN.md](DESIGN.md).
